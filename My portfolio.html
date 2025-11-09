@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniket Tiwari | Portfolio</title>
+    <meta name="description" content="Portfolio of Aniket Tiwari - React Native & Web Developer">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles if needed, mostly handled by Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-200 selection:bg-violet-500/30 font-sans">
+
+    <!-- Navigation -->
+    <nav id="main-nav" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter bg-gradient-to-r from-violet-400 to-fuchsia-500 bg-clip-text text-transparent">
+                AT.
+            </div>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-violet-400 transition-colors uppercase tracking-widest">About</a>
+                <a href="#skills" class="hover:text-violet-400 transition-colors uppercase tracking-widest">Skills</a>
+                <a href="#projects" class="hover:text-violet-400 transition-colors uppercase tracking-widest">Projects</a>
+                <a href="#experience" class="hover:text-violet-400 transition-colors uppercase tracking-widest">Experience</a>
+                <a href="#contact" class="hover:text-violet-400 transition-colors uppercase tracking-widest">Contact</a>
+            </div>
+
+            <!-- Mobile Nav Toggle -->
+            <button id="menu-toggle" class="md:hidden text-slate-300 hover:text-white">
+                <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-slate-900/95 backdrop-blur-md border-b border-slate-800 py-4">
+            <div class="flex flex-col space-y-4 px-6">
+                <a href="#about" class="mobile-link text-left hover:text-violet-400 transition-colors uppercase tracking-widest py-2">About</a>
+                <a href="#skills" class="mobile-link text-left hover:text-violet-400 transition-colors uppercase tracking-widest py-2">Skills</a>
+                <a href="#projects" class="mobile-link text-left hover:text-violet-400 transition-colors uppercase tracking-widest py-2">Projects</a>
+                <a href="#experience" class="mobile-link text-left hover:text-violet-400 transition-colors uppercase tracking-widest py-2">Experience</a>
+                <a href="#contact" class="mobile-link text-left hover:text-violet-400 transition-colors uppercase tracking-widest py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background subtle glow effects -->
+        <div class="absolute top-1/4 -left-20 w-96 h-96 bg-violet-600/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
+        <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-fuchsia-600/10 rounded-full blur-3xl -z-10"></div>
+
+        <div class="container mx-auto px-6 text-center z-10">
+            <div class="inline-block mb-4 px-3 py-1 text-sm font-medium text-violet-300 bg-violet-900/30 rounded-full border border-violet-700/50">
+                Available for Opportunities
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
+                Hi, I'm <span class="bg-gradient-to-r from-violet-400 via-fuchsia-500 to-indigo-400 bg-clip-text text-transparent">Aniket Tiwari</span>
+            </h1>
+            <h2 class="text-2xl md:text-3xl text-slate-400 mb-8 font-light">
+                React Native & Web Developer
+            </h2>
+            <p class="max-w-2xl mx-auto text-lg text-slate-500 mb-12 leading-relaxed">
+                Computer Science student at Mumbai University passionate about building efficient, scalable full-stack web and mobile applications with strong foundations in Data Structures & Algorithms.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#projects" class="px-8 py-4 bg-violet-600 hover:bg-violet-700 text-white rounded-full font-semibold transition-all transform hover:scale-105 flex items-center shadow-lg shadow-violet-900/20">
+                    View My Work <i data-lucide="chevron-down" class="ml-2 w-4 h-4"></i>
+                </a>
+                <a href="mailto:tiwarianiket8228@gmail.com" class="px-8 py-4 bg-transparent border-2 border-slate-700 text-slate-300 hover:border-violet-500 hover:text-violet-400 rounded-full font-semibold transition-all flex items-center">
+                    Get In Touch <i data-lucide="mail" class="ml-2 w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Floating Icons Animation -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden -z-10">
+            <div class="absolute top-1/3 left-1/4 text-violet-800/20 w-12 h-12 animate-bounce duration-[5000ms]">
+                <i data-lucide="code-2" class="w-12 h-12"></i>
+            </div>
+            <div class="absolute bottom-1/3 right-1/4 text-fuchsia-800/20 w-16 h-16 animate-pulse duration-[4000ms]">
+                <i data-lucide="smartphone" class="w-16 h-16"></i>
+            </div>
+            <div class="absolute top-20 right-20 text-indigo-800/20 w-10 h-10">
+                <i data-lucide="database" class="w-10 h-10"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Expertise Section -->
+    <section id="skills" class="py-24 bg-slate-950/50 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Technical Expertise</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-violet-500 to-fuchsia-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Frontend Skills -->
+                <div class="bg-slate-900/50 p-8 rounded-2xl border border-slate-800 backdrop-blur-sm hover:border-violet-500/30 transition-colors">
+                    <div class="flex items-center mb-8">
+                        <div class="p-3 bg-violet-500/10 rounded-lg mr-4 text-violet-400">
+                            <i data-lucide="code-2" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Frontend Development</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <!-- SkillBar Component Replacement -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-slate-300">React.js</span>
+                                <span class="text-slate-500 text-sm">90%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-violet-500 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-slate-300">React Native</span>
+                                <span class="text-slate-500 text-sm">85%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-violet-500 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-slate-300">HTML/CSS</span>
+                                <span class="text-slate-500 text-sm">95%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-violet-500 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-slate-300">JavaScript</span>
+                                <span class="text-slate-500 text-sm">90%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-violet-500 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Skills -->
+                <div class="bg-slate-900/50 p-8 rounded-2xl border border-slate-800 backdrop-blur-sm hover:border-emerald-500/30 transition-colors">
+                    <div class="flex items-center mb-8">
+                        <div class="p-3 bg-emerald-500/10 rounded-lg mr-4 text-emerald-400">
+                            <i data-lucide="terminal" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Backend & APIs</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-slate-300">Node.js</span>
+                                <span class="text-slate-500 text-sm">80%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-emerald-500 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-slate-300">Python</span>
+                                <span class="text-slate-500 text-sm">75%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-emerald-500 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-slate-300">RESTful APIs</span>
+                                <span class="text-slate-500 text-sm">85%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-emerald-500 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database & Tools -->
+                <div class="bg-slate-900/50 p-8 rounded-2xl border border-slate-800 backdrop-blur-sm hover:border-blue-500/30 transition-colors">
+                    <div class="flex items-center mb-8">
+                        <div class="p-3 bg-blue-500/10 rounded-lg mr-4 text-blue-400">
+                            <i data-lucide="database" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Database & Tools</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-slate-300">MongoDB</span>
+                                <span class="text-slate-500 text-sm">80%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-500 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-slate-300">MySQL</span>
+                                <span class="text-slate-500 text-sm">75%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-500 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-slate-300">Git</span>
+                                <span class="text-slate-500 text-sm">85%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-500 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-slate-300">Linux</span>
+                                <span class="text-slate-500 text-sm">70%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-500 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="py-24 relative overflow-hidden">
+        <div class="absolute top-1/2 right-0 w-96 h-96 bg-indigo-900/10 rounded-full blur-3xl -z-10"></div>
+
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-violet-500 to-fuchsia-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Project 1 -->
+                <div class="group bg-slate-900/40 rounded-3xl border border-slate-800 overflow-hidden hover:border-violet-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-900/10 flex flex-col">
+                    <div class="h-2 w-full bg-gradient-to-r from-violet-500/50 via-fuchsia-500/50 to-indigo-500/50"></div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <p class="text-violet-400 text-sm font-semibold tracking-wider uppercase mb-2">Mobile Application</p>
+                                <h3 class="text-2xl font-bold text-slate-100">CoinX - Real time Crypto News App</h3>
+                            </div>
+                            <a href="https://github.com/anikettiwari-code/CoinX---Cryptocurrency-News-Application" target="_blank" rel="noreferrer" class="p-2 bg-slate-800 rounded-full text-slate-400 hover:text-white hover:bg-violet-600 transition-all">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+
+                        <p class="text-slate-400 mb-8 leading-relaxed">A cross-platform mobile application that delivers real-time cryptocurrency news and market updates to users, leveraging live data feeds for instant information.</p>
+
+                        <div class="grid grid-cols-2 gap-4 mb-8 p-4 bg-slate-950/50 rounded-xl border border-slate-800/50">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-white bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">99.9%</div>
+                                <div class="text-xs text-slate-500 uppercase tracking-wider">Uptime</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-white bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">&lt;100ms</div>
+                                <div class="text-xs text-slate-500 uppercase tracking-wider">Latency</div>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h4 class="text-sm font-semibold text-slate-300 mb-4 uppercase tracking-wider">Key Features</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start text-slate-400 text-sm">
+                                    <span class="text-violet-500 mr-2">▹</span>
+                                    Live market data streaming
+                                </li>
+                                <li class="flex items-start text-slate-400 text-sm">
+                                    <span class="text-violet-500 mr-2">▹</span>
+                                    Push notifications for breaking news
+                                </li>
+                                <li class="flex items-start text-slate-400 text-sm">
+                                    <span class="text-violet-500 mr-2">▹</span>
+                                    Cross-platform (iOS & Android) support
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-3 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-full border border-slate-700">React Native</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-full border border-slate-700">API Integration</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-full border border-slate-700">Real-time Data</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group bg-slate-900/40 rounded-3xl border border-slate-800 overflow-hidden hover:border-violet-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-900/10 flex flex-col">
+                    <div class="h-2 w-full bg-gradient-to-r from-violet-500/50 via-fuchsia-500/50 to-indigo-500/50"></div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <p class="text-violet-400 text-sm font-semibold tracking-wider uppercase mb-2">Web & Mobile Solution</p>
+                                <h3 class="text-2xl font-bold text-slate-100">E-Vehicle</h3>
+                            </div>
+                            <a href="https://github.com/anikettiwari-code/E-Vehicles" target="_blank" rel="noreferrer" class="p-2 bg-slate-800 rounded-full text-slate-400 hover:text-white hover:bg-violet-600 transition-all">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+
+                        <p class="text-slate-400 mb-8 leading-relaxed">An emergency response coordination tool designed to help users find safe routes and coordinate during critical situations, focusing on quick access to essential information.</p>
+
+                        <div class="grid grid-cols-2 gap-4 mb-8 p-4 bg-slate-950/50 rounded-xl border border-slate-800/50">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-white bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">100</div>
+                                <div class="text-xs text-slate-500 uppercase tracking-wider">Accessibility</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-white bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">95</div>
+                                <div class="text-xs text-slate-500 uppercase tracking-wider">Performance</div>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h4 class="text-sm font-semibold text-slate-300 mb-4 uppercase tracking-wider">Key Features</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start text-slate-400 text-sm">
+                                    <span class="text-violet-500 mr-2">▹</span>
+                                    Real-time safe route mapping
+                                </li>
+                                <li class="flex items-start text-slate-400 text-sm">
+                                    <span class="text-violet-500 mr-2">▹</span>
+                                    Emergency contact quick-dial
+                                </li>
+                                <li class="flex items-start text-slate-400 text-sm">
+                                    <span class="text-violet-500 mr-2">▹</span>
+                                    Offline mode for critical data
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-3 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-full border border-slate-700">React.js</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-full border border-slate-700">Node.js</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-full border border-slate-700">Maps API</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-full border border-slate-700">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="py-24 bg-slate-900/30">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Experience & Education</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-violet-500 to-fuchsia-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Experience Item -->
+                <div class="relative pl-8 border-l-2 border-violet-500/30">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-violet-500 shadow-lg shadow-violet-500/50"></div>
+                    <div class="bg-slate-900/80 p-6 rounded-xl border border-slate-800">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-100">Training And Development Intern</h3>
+                                <p class="text-violet-400">Skillspade Solutions</p>
+                            </div>
+                            <span class="text-sm text-slate-500 mt-2 sm:mt-0 px-3 py-1 bg-slate-800 rounded-full">May 2025 - Present</span>
+                        </div>
+                        <p class="text-slate-400">
+                            Goregaon, Maharashtra, India. Gaining hands-on experience in software development life cycles and contributing to active company projects.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Education Item -->
+                <div class="relative pl-8 border-l-2 border-fuchsia-500/30">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-fuchsia-500 shadow-lg shadow-fuchsia-500/50"></div>
+                    <div class="bg-slate-900/80 p-6 rounded-xl border border-slate-800">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-100">B.Sc. Computer Science</h3>
+                                <p class="text-fuchsia-400">University of Mumbai</p>
+                            </div>
+                            <span class="text-sm text-slate-500 mt-2 sm:mt-0 px-3 py-1 bg-slate-800 rounded-full">Jun 2023 - Jun 2026</span>
+                        </div>
+                        <p class="text-slate-400">
+                            Focusing on core computer science principles, Data Structures & Algorithms, and modern software engineering practices.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Let's Build Something Amazing</h2>
+                <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+                    Looking for a developer who can create high-performance, interactive web and mobile experiences?
+                </p>
+            </div>
+
+            <div class="bg-slate-900/50 p-8 md:p-12 rounded-3xl border border-slate-800 backdrop-blur-xl shadow-2xl">
+                <form class="space-y-6 text-left" onsubmit="event.preventDefault(); alert('Message sent! (Demo only)');">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-400 mb-2">Name</label>
+                            <input type="text" id="name" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-violet-500 transition-colors" placeholder="xyz" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-slate-400 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-violet-500 transition-colors" placeholder="xyz@example.com" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-slate-400 mb-2">Message</label>
+                        <textarea id="message" rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-violet-500 transition-colors resize-none" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white rounded-lg font-bold text-lg transition-all transform hover:scale-[1.02] flex justify-center items-center">
+                        Send Message <i data-lucide="send" class="ml-2 w-5 h-5"></i>
+                    </button>
+                </form>
+
+                <div class="mt-12 pt-12 border-t border-slate-800 flex justify-center space-x-8">
+                    <a href="https://www.linkedin.com/in/aniket-tiwari02" target="_blank" rel="noreferrer" class="text-slate-400 hover:text-violet-400 transition-colors bg-slate-950 p-3 rounded-full border border-slate-800 hover:border-violet-500/50">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noreferrer" class="text-slate-400 hover:text-violet-400 transition-colors bg-slate-950 p-3 rounded-full border border-slate-800 hover:border-violet-500/50">
+                        <i data-lucide="github" class="w-6 h-6"></i>
+                    </a>
+                    <a href="mailto:tiwarianiket8228@gmail.com" class="text-slate-400 hover:text-violet-400 transition-colors bg-slate-950 p-3 rounded-full border border-slate-800 hover:border-violet-500/50">
+                        <i data-lucide="mail" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-slate-500 text-sm border-t border-slate-900 bg-slate-950">
+        <p>© <span id="current-year"></span> Aniket Tiwari. All rights reserved.</p>
+    </footer>
+
+    <!-- Script to initialize icons and handle interactions -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Navbar Scroll Effect
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-slate-950/80', 'backdrop-blur-md', 'py-4', 'border-b', 'border-slate-800/50');
+                nav.classList.remove('bg-transparent', 'py-6');
+            } else {
+                nav.classList.remove('bg-slate-950/80', 'backdrop-blur-md', 'py-4', 'border-b', 'border-slate-800/50');
+                nav.classList.add('bg-transparent', 'py-6');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        let isMenuOpen = false;
+
+        menuToggle.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                // Change icon to X (requires re-rendering or manual SVG replacement, simplest is just toggling classes if we had both icons, but Lucide is dynamic. Let's just re-render the icon data attribute and call createIcons again for simplicity in this vanilla context, or just leave it as menu for now for simplicity as raw SVG replacement is verbose).
+                // A simpler way with Lucide in vanilla JS:
+                 menuToggle.innerHTML = isMenuOpen ? '<i data-lucide="x" class="w-6 h-6"></i>' : '<i data-lucide="menu" class="w-6 h-6"></i>';
+                 lucide.createIcons();
+            } else {
+                mobileMenu.classList.add('hidden');
+                 menuToggle.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+                 lucide.createIcons();
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMenuOpen) {
+                    isMenuOpen = false;
+                    mobileMenu.classList.add('hidden');
+                    menuToggle.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+                    lucide.createIcons();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
